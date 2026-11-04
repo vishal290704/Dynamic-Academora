@@ -264,6 +264,26 @@ h3 { font-size: 25px; }
 }
 @media (max-width: 520px) {
   .page-hero h1, .hero-copy h1, h2, h3 { overflow-wrap: anywhere; }
+  .hero { padding: 34px 0 56px; background: var(--ivory); }
+  .hero-grid { gap: 34px; }
+  .hero-copy { padding-top: 0; }
+  .hero-school-lockup { margin-bottom: 22px; padding: 0 0 13px; border-top: 2px solid var(--coral); border-left: 0; }
+  .hero-school-lockup span { font-size: 41px; line-height: .95; }
+  .hero-school-lockup strong { font-size: 11px; letter-spacing: .24em; }
+  .hero-school-lockup i { font-size: 9px; }
+  .hero-copy > .eyebrow { font-size: 9px; }
+  .hero-copy h1 { max-width: 330px; margin-top: 15px; font-size: clamp(45px, 13.5vw, 61px); line-height: .98; }
+  .hero-text { margin: 20px 0 24px; font-size: 15px; line-height: 1.55; }
+  .hero-actions { align-items: stretch; gap: 14px; }
+  .hero-actions .button { width: 100%; padding: 15px 19px; }
+  .hero-actions .text-link { justify-content: center; padding: 4px; }
+  .hero-note { margin-top: 26px; padding: 13px 15px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,253,249,.7); }
+  .hero-visual { min-height: 285px; }
+  .hero-image { inset: 0; border: 8px solid var(--white); border-radius: 28px 28px 72px 28px; box-shadow: 0 16px 30px rgba(24,54,74,.12); }
+  .hero-image::before { position: absolute; z-index: 1; inset: 10px; border: 1px solid rgba(255,255,255,.55); border-radius: 20px 20px 62px 20px; content: ""; pointer-events: none; }
+  .hero-badge { bottom: 17px; left: 14px; padding: 10px 12px; font-size: 8px; }
+  .hero-float { top: -14px; right: 12px; width: 74px; height: 74px; font-size: 19px; }
+  .hero-float small { font-size: 7px; }
 }
 
 /* Bright editorial accents keep the school identity warm, curious, and distinctive. */
