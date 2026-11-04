@@ -1,0 +1,7 @@
+import Link from "next/link";
+import { ArrowUpRight, MapPin, Phone } from "lucide-react";
+import { navigation, school, images } from "@/data/school";
+import Image from "next/image";
+export default function SiteFooter() {
+  return <footer className="footer"><div className="container footer-grid"><div className="footer-brand"><Image src={images.logo} alt="" width={46} height={46} /><h2>Dynamic English School</h2><p>A brighter place to grow — nurturing young minds with knowledge, curiosity, and confidence.</p><span className="footer-established">Established {school.established}</span></div><div><p className="footer-label">Explore</p>{navigation.slice(0, 4).map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</div><div><p className="footer-label">Connect</p><a href={`tel:${school.phones[0]}`}><Phone size={15} /> {school.phones[0]}</a><a href={`tel:${school.phones[1]}`}><Phone size={15} /> {school.phones[1]}</a><a href={school.mapsUrl} target="_blank" rel="noreferrer"><MapPin size={15} /> Phulwariya, Varanasi</a></div><div className="footer-note"><p className="footer-label">A first step</p><p>Ready to discover a thoughtful start for your child?</p><Link className="text-link light-link" href="/contact">Talk to the school <ArrowUpRight size={16} /></Link></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Dynamic English School. All Rights Reserved.</span><span>Nursery to Class 8</span></div></footer>;
+}
