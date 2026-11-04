@@ -1,3 +1,0 @@
-export const RESULT_CONFIG = {
-  PASSING_PERCENTAGE: 33,
-};

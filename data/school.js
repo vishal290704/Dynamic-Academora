@@ -12,19 +12,16 @@ export const school = {
     "https://www.google.com/maps/search/?api=1&query=Dynamic+English+School+Phulwariya+Varanasi",
 };
 
-const image = (id, width = 1200) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=85`;
-
 export const images = {
   logo: "/images/logo-placeholder.svg",
-  hero: image("photo-1509062522246-3755977927d7"),
-  campus: image("photo-1562774053-701939374585"),
-  classroom: image("photo-1503676260728-1c00da094a0b"),
-  learning: image("photo-1544717305-2782549b5136"),
-  activity: image("photo-1503454537195-1dcabb73ffb9"),
-  director: image("photo-1560250097-0b93528c311a", 700),
-  principal: image("photo-1551836022-d5d88e9218df", 700),
-  founder: image("photo-1500648767791-00dcc994a43e", 700),
+  hero: "/images/placeholders/hero.svg",
+  campus: "/images/placeholders/campus.svg",
+  classroom: "/images/placeholders/classroom.svg",
+  learning: "/images/placeholders/learning.svg",
+  activity: "/images/placeholders/activity.svg",
+  director: "/images/placeholders/portrait.svg",
+  principal: "/images/placeholders/portrait.svg",
+  founder: "/images/placeholders/founder.svg",
 };
 
 export const gallery = [
@@ -34,7 +31,7 @@ export const gallery = [
   { src: images.activity, title: "Creative activities", category: "Activities" },
   { src: images.hero, title: "Everyday discovery", category: "Learning" },
   {
-    src: image("photo-1529390079861-591de354faf5"),
+    src: "/images/placeholders/community.svg",
     title: "Shared moments",
     category: "Celebrations",
   },

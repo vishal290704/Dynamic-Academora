@@ -10,7 +10,16 @@ export default function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  useEffect(() => { const onScroll = () => setScrolled(window.scrollY > 18); onScroll(); window.addEventListener("scroll", onScroll, { passive: true }); return () => window.removeEventListener("scroll", onScroll); }, []);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 18);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
   return <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
     <div className="container header-inner">
       <Link href="/" className="brand" onClick={() => setOpen(false)} aria-label="Dynamic English School home"><Image src={images.logo} alt="" width={45} height={45} priority /><span><strong>Dynamic</strong><small>English School</small></span></Link>
